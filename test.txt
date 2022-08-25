@@ -1,0 +1,46 @@
+pytest yükleme:
+
+*Aşağıdaki komutu komut satırınızda çalıştırın:
+pip install -U pytest 
+*Sürümü öğrenmek için aşağıdaki komutu çalıştırabilirsiniz:
+pytest --version 
+*Testinizi çalıştırmak için komutunu kullanabilirsiniz:
+pytest tests/test_name.py
+* Birden çok test çalıştırmak için aşağıdaki komutları kullanabilirsiniz:
+pytest tests/test_*.py veya pytest tests/*_test.py
+
+*Testleri bir modülde çalıştırmak:
+pytest test_mod.py
+
+*Testleri bir dizinde çalıştırmak:
+pytest testing/....
+
+*Anahtar kelime ifadelerine göre testler çalıştırmak:
+pytest -k "MyClass and not method" -q
+
+*Bir modül içerisinde belirli testi çalıştırmak için: 
+pytest test_mod.py::test_func veya pytest test_mod.py::TestClass::test_method
+
+*Testleri işaretçi ifadelerden çalıştırmak:
+pytest -m slow
+
+*paketlerden testler çalıştırmak:
+pytest pkg.testing
+
+*Eklentilerin yüklenmesi:
+pytest -p myplugin
+
+*Eklentileri devre dışı bırakmak:
+pytest -p no:plugin_name
+
+
+
+
+
+
+
+Testlerde geçici dizinler ve dosyalar nasıl kurulur:
+tmp_path:
+
+
+
